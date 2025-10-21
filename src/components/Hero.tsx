@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -43,20 +44,24 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
-            className="gradient-primary glow hover:glow-lg transition-all duration-300 text-lg px-8 py-6 group"
-          >
-            Start a Project
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6 backdrop-blur-sm"
-          >
-            Contact Us
-          </Button>
+          <Link to="/start-project">
+            <Button 
+              size="lg" 
+              className="gradient-primary glow hover:glow-lg transition-all duration-300 text-lg px-8 py-6 group"
+            >
+              ابدأ مشروعك
+              <ArrowRight className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6 backdrop-blur-sm"
+            >
+              تواصل معنا
+            </Button>
+          </Link>
         </div>
       </div>
       
