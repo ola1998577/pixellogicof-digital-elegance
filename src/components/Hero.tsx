@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
         
         <div className="mb-6">
-          <img src={logo} alt="PIXELLOGICOF" className="w-full max-w-3xl mx-auto" />
+          <img src={logo} alt="PIXELLOGICOF" className="w-full max-w-md md:max-w-lg mx-auto" />
         </div>
         
         <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto font-light">
