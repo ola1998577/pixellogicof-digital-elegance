@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -35,9 +36,9 @@ const Hero = () => {
           <span className="text-sm text-muted-foreground">Female-Owned Tech & Design</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
-          <span className="text-gradient">PIXELLOGICOF</span>
-        </h1>
+        <div className="mb-6">
+          <img src={logo} alt="PIXELLOGICOF" className="w-full max-w-3xl mx-auto" />
+        </div>
         
         <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto font-light">
           We blend technology and creativity to shape a smarter digital future.
