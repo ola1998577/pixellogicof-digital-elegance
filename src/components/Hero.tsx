@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroBackground from "@/assets/hero-background.jpg";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
+  const { t, language } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -33,7 +36,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
         <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20">
           <Sparkles className="w-4 h-4 text-primary-light" />
-          <span className="text-sm text-muted-foreground">Female-Owned Tech & Design</span>
+          <span className="text-sm text-muted-foreground">{t("hero.badge")}</span>
         </div>
         
         <div className="mb-6">
@@ -41,7 +44,7 @@ const Hero = () => {
         </div>
         
         <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto font-light">
-          We blend technology and creativity to shape a smarter digital future.
+          {t("hero.tagline")}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -50,8 +53,8 @@ const Hero = () => {
               size="lg" 
               className="gradient-primary glow hover:glow-lg transition-all duration-300 text-lg px-8 py-6 group"
             >
-              ابدأ مشروعك
-              <ArrowRight className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              {t("hero.startProject")}
+              <ArrowRight className={`w-5 h-5 group-hover:-translate-x-1 transition-transform ${language === 'ar' ? 'mr-2' : 'ml-2'}`} />
             </Button>
           </Link>
           <Link to="/contact">
@@ -60,7 +63,7 @@ const Hero = () => {
               variant="outline"
               className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6 backdrop-blur-sm"
             >
-              تواصل معنا
+              {t("hero.contactUs")}
             </Button>
           </Link>
         </div>

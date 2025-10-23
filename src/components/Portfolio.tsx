@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
@@ -33,12 +34,13 @@ const projects = [
 
 const Portfolio = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const { t } = useLanguage();
 
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-gradient">Our Work</span>
+          <span className="text-gradient">{t("portfolio.title")}</span>
         </h2>
         
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
@@ -63,7 +65,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                   <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                   <p className="text-sm text-foreground/90 mb-2">
-                    <span className="font-semibold">Tools:</span> {project.tools}
+                    <span className="font-semibold">{t("portfolio.tools")}:</span> {project.tools}
                   </p>
                   <p className="text-sm text-primary-light font-semibold">
                     {project.result}

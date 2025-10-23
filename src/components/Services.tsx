@@ -1,62 +1,65 @@
 import { Code, Palette, Sparkles, Brain, Globe, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    id: "web-development",
-    icon: Globe,
-    title: "تطوير مواقع الويب",
-    description: "مواقع ويب متجاوبة وسريعة تجمع بين الأداء والجمال، مبنية بأحدث التقنيات لتوفير تجربة استثنائية.",
-    gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    id: "app-development",
-    icon: Smartphone,
-    title: "تطوير تطبيقات الجوال",
-    description: "تطبيقات جوال قوية لنظامي iOS و Android، توفر تجربة مستخدم سلسة وأداء عالي على جميع الأجهزة.",
-    gradient: "from-blue-500 to-purple-500",
-  },
-  {
-    id: "uiux-design",
-    icon: Palette,
-    title: "تصميم UI/UX",
-    description: "تصميمات تركز على المستخدم تجمع بين الجمالية والوظيفية، تخلق تجارب بديهية تسعد المستخدمين.",
-    gradient: "from-pink-500 to-red-500",
-  },
-  {
-    id: "brand-identity",
-    icon: Sparkles,
-    title: "الهوية البصرية",
-    description: "هويات بصرية متكاملة تروي قصة علامتك التجارية وتميزك في السوق بتصميم فريد واحترافي.",
-    gradient: "from-yellow-500 to-orange-500",
-  },
-  {
-    id: "ai-transformation",
-    icon: Brain,
-    title: "الذكاء الاصطناعي",
-    description: "حلول ذكاء اصطناعي متقدمة تحول عملياتك، تزيد الكفاءة، وتفتح آفاق جديدة للابتكار والنمو.",
-    gradient: "from-green-500 to-teal-500",
-  },
-  {
-    id: "code",
-    icon: Code,
-    title: "حلول برمجية مخصصة",
-    description: "برمجيات مصممة خصيصاً لتلبية احتياجات عملك الفريدة، قابلة للتوسع وتنمو معك خطوة بخطوة.",
-    gradient: "from-indigo-500 to-purple-500",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t, language } = useLanguage();
+  
+  const services = [
+    {
+      id: "web-development",
+      icon: Globe,
+      titleKey: "services.web.title",
+      descKey: "services.web.desc",
+      gradient: "from-purple-500 to-pink-500",
+    },
+    {
+      id: "app-development",
+      icon: Smartphone,
+      titleKey: "services.app.title",
+      descKey: "services.app.desc",
+      gradient: "from-blue-500 to-purple-500",
+    },
+    {
+      id: "uiux-design",
+      icon: Palette,
+      titleKey: "services.uiux.title",
+      descKey: "services.uiux.desc",
+      gradient: "from-pink-500 to-red-500",
+    },
+    {
+      id: "brand-identity",
+      icon: Sparkles,
+      titleKey: "services.brand.title",
+      descKey: "services.brand.desc",
+      gradient: "from-yellow-500 to-orange-500",
+    },
+    {
+      id: "ai-transformation",
+      icon: Brain,
+      titleKey: "services.ai.title",
+      descKey: "services.ai.desc",
+      gradient: "from-green-500 to-teal-500",
+    },
+    {
+      id: "code",
+      icon: Code,
+      titleKey: "services.code.title",
+      descKey: "services.code.desc",
+      gradient: "from-indigo-500 to-purple-500",
+    },
+  ];
+  
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">ماذا نقدم</span>
+            <span className="text-gradient">{t("services.title")}</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            نجمع بين التكنولوجيا المتقدمة والإبداع لتقديم حلول رقمية متكاملة
+            {t("services.subtitle")}
           </p>
         </div>
         
@@ -81,18 +84,18 @@ const Services = () => {
               {/* Content */}
               <div className="relative">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary-light transition-colors duration-300">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
                 <p className="text-foreground/70 leading-relaxed mb-4">
-                  {service.description}
+                  {t(service.descKey)}
                 </p>
                 
                 <Button 
                   variant="ghost" 
                   className="p-0 h-auto text-primary-light hover:text-primary hover:bg-transparent group/btn"
                 >
-                  <span className="ml-2">اعرف المزيد</span>
-                  <span className="inline-block group-hover/btn:-translate-x-1 transition-transform">←</span>
+                  <span className={language === 'ar' ? 'ml-2' : 'mr-2'}>{t("services.learnMore")}</span>
+                  <span className={`inline-block group-hover/btn:-translate-x-1 transition-transform ${language === 'ar' ? '' : 'rotate-180'}`}>←</span>
                 </Button>
               </div>
 
@@ -105,7 +108,7 @@ const Services = () => {
         <div className="text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Link to="/services">
             <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 transition-all">
-              عرض جميع الخدمات
+              {t("services.viewAll")}
             </Button>
           </Link>
         </div>

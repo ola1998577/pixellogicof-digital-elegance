@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const isActive = (path: string) => location.pathname === path;
 
   const navLinks = [
-    { path: "/", label: "الرئيسية" },
-    { path: "/services", label: "الخدمات" },
-    { path: "/portfolio", label: "الأعمال" },
-    { path: "/contact", label: "تواصل معنا" },
+    { path: "/", label: t("nav.home") },
+    { path: "/services", label: t("nav.services") },
+    { path: "/portfolio", label: t("nav.portfolio") },
+    { path: "/contact", label: t("nav.contact") },
   ];
 
   return (
@@ -27,7 +29,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -41,9 +43,18 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleLanguage}
+              className="hover:bg-primary/10"
+              aria-label="Toggle language"
+            >
+              <Languages className="w-5 h-5 text-primary-light" />
+            </Button>
             <Link to="/start-project">
               <Button className="gradient-primary glow hover:glow-lg transition-all duration-300">
-                ابدأ مشروعك
+                {t("nav.startProject")}
               </Button>
             </Link>
           </div>
@@ -80,9 +91,17 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
+              <Button
+                variant="outline"
+                onClick={toggleLanguage}
+                className="border-primary/50 hover:bg-primary/10 justify-start"
+              >
+                <Languages className={`w-5 h-5 text-primary-light ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+                {language === "en" ? "العربية" : "English"}
+              </Button>
               <Link to="/start-project" onClick={() => setIsOpen(false)}>
                 <Button className="gradient-primary glow w-full">
-                  ابدأ مشروعك
+                  {t("nav.startProject")}
                 </Button>
               </Link>
             </div>
