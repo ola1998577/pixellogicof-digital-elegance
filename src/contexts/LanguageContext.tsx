@@ -18,7 +18,6 @@ const translations = {
     "nav.startProject": "Start Your Project",
     
     // Hero
-    "hero.badge": "Female-Owned Tech & Design",
     "hero.tagline": "We blend technology and creativity to shape a smarter digital future.",
     "hero.startProject": "Start Your Project",
     "hero.contactUs": "Contact Us",
@@ -46,6 +45,53 @@ const translations = {
     "services.learnMore": "Learn More",
     "services.viewAll": "View All Services",
     
+        "services.marketing.title": "Digital Marketing",
+    "services.marketing.desc": "Effective digital marketing strategies that increase your reach and deliver measurable results.",
+   
+    "services.analytics.title": "Data Analytics",
+    "services.analytics.desc": "Transform your data into actionable insights with advanced analytics and interactive dashboards.",
+   
+// Service Features
+"services.web.features.0": "React & Next.js",
+"services.web.features.1": "Responsive Design",
+"services.web.features.2": "High Performance",
+"services.web.features.3": "SEO Optimized",
+
+"services.app.features.0": "React Native",
+"services.app.features.1": "Flutter",
+"services.app.features.2": "Smooth Experience",
+"services.app.features.3": "Cross-Platform Support",
+
+"services.uiux.features.0": "Figma & Adobe XD",
+"services.uiux.features.1": "User Research",
+"services.uiux.features.2": "Interactive Prototypes",
+"services.uiux.features.3": "Usability Testing",
+
+"services.brand.features.0": "Logo Design",
+"services.brand.features.1": "Brand Guidelines",
+"services.brand.features.2": "Marketing Materials",
+"services.brand.features.3": "Complete Visual Identity",
+
+"services.ai.features.0": "Machine Learning",
+"services.ai.features.1": "Natural Language Processing",
+"services.ai.features.2": "Process Automation",
+"services.ai.features.3": "Data Analysis",
+
+"services.marketing.features.0": "Social Media Management",
+"services.marketing.features.1": "Content Creation",
+"services.marketing.features.2": "Search Engine Optimization",
+"services.marketing.features.3": "Paid Advertising",
+
+"services.analytics.features.0": "Data Visualization",
+"services.analytics.features.1": "Custom Reports",
+"services.analytics.features.2": "Predictive Analytics",
+"services.analytics.features.3": "Performance Tracking",
+
+"services.code.features.0": "Scalable Solutions",
+"services.code.features.1": "API Integration",
+"services.code.features.2": "Maintenance & Support",
+"services.code.features.3": "Technical Consulting",
+
     // Portfolio
     "portfolio.title": "Our Work",
     "portfolio.subtitle": "Successful projects where we turned ideas into stunning digital reality",
@@ -68,7 +114,7 @@ const translations = {
     "contact.info.email": "Email",
     "contact.info.phone": "Phone",
     "contact.info.location": "Location",
-    "contact.info.locationText": "Riyadh, Saudi Arabia",
+    "contact.info.locationText": "Tartous , Syria",
     "contact.follow": "Follow Us",
     
     // Start Project
@@ -114,7 +160,6 @@ const translations = {
     "nav.startProject": "ابدأ مشروعك",
     
     // Hero
-    "hero.badge": "شركة تقنية نسائية",
     "hero.tagline": "نجمع بين التكنولوجيا والإبداع لتشكيل مستقبل رقمي أذكى.",
     "hero.startProject": "ابدأ مشروعك",
     "hero.contactUs": "تواصل معنا",
@@ -141,7 +186,54 @@ const translations = {
     "services.code.desc": "برمجيات مصممة خصيصاً لتلبية احتياجات عملك الفريدة، قابلة للتوسع وتنمو معك خطوة بخطوة.",
     "services.learnMore": "اعرف المزيد",
     "services.viewAll": "عرض جميع الخدمات",
-    
+    "services.marketing.title": "التسويق الرقمي",
+    "services.marketing.desc": "استراتيجيات تسويق رقمي فعالة تزيد من وصولك وتحقق نتائج قابلة للقياس.",
+   
+    "services.analytics.title": "تحليل البيانات",
+    "services.analytics.desc": "حوّل بياناتك إلى رؤى قابلة للتنفيذ من خلال التحليلات المتقدمة ولوحات المعلومات التفاعلية.",
+   
+    // ميزات الخدمات
+"services.web.features.0": "React و Next.js",
+"services.web.features.1": "تصميم متجاوب",
+"services.web.features.2": "أداء عالي",
+"services.web.features.3": "تحسين لمحركات البحث",
+
+"services.app.features.0": "React Native",
+"services.app.features.1": "Flutter",
+"services.app.features.2": "تجربة سلسة",
+"services.app.features.3": "دعم متعدد المنصات",
+
+"services.uiux.features.0": "Figma و Adobe XD",
+"services.uiux.features.1": "بحث المستخدم",
+"services.uiux.features.2": "نماذج تفاعلية",
+"services.uiux.features.3": "اختبار قابلية الاستخدام",
+
+"services.brand.features.0": "تصميم الشعار",
+"services.brand.features.1": "دليل العلامة التجارية",
+"services.brand.features.2": "مواد تسويقية",
+"services.brand.features.3": "هوية بصرية متكاملة",
+
+"services.ai.features.0": "تعلم الآلة",
+"services.ai.features.1": "معالجة اللغة الطبيعية",
+"services.ai.features.2": "أتمتة العمليات",
+"services.ai.features.3": "تحليل البيانات",
+
+"services.marketing.features.0": "إدارة وسائل التواصل الاجتماعي",
+"services.marketing.features.1": "إنشاء المحتوى",
+"services.marketing.features.2": "تحسين محركات البحث",
+"services.marketing.features.3": "إعلانات مدفوعة",
+
+"services.analytics.features.0": "تصور البيانات",
+"services.analytics.features.1": "تقارير مخصصة",
+"services.analytics.features.2": "تحليلات تنبؤية",
+"services.analytics.features.3": "تتبع الأداء",
+
+"services.code.features.0": "حلول قابلة للتوسع",
+"services.code.features.1": "تكامل API",
+"services.code.features.2": "صيانة ودعم",
+"services.code.features.3": "استشارات تقنية",
+
+
     // Portfolio
     "portfolio.title": "أعمالنا",
     "portfolio.subtitle": "مشاريع ناجحة حولنا فيها الأفكار إلى واقع رقمي مبهر",
@@ -164,7 +256,7 @@ const translations = {
     "contact.info.email": "البريد الإلكتروني",
     "contact.info.phone": "الهاتف",
     "contact.info.location": "الموقع",
-    "contact.info.locationText": "الرياض، المملكة العربية السعودية",
+    "contact.info.locationText": "سوريا , طرطوس",
     "contact.follow": "تابعنا",
     
     // Start Project

@@ -37,11 +37,9 @@ const Portfolio = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 relative">
+    <section className="py-2 relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-gradient">{t("portfolio.title")}</span>
-        </h2>
+      
         
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => (

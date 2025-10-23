@@ -34,11 +34,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-        <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20">
-          <Sparkles className="w-4 h-4 text-primary-light" />
-          <span className="text-sm text-muted-foreground">{t("hero.badge")}</span>
-        </div>
-        
+
         <div className="mb-6">
           <img src={logo} alt="PIXELLOGICOF" className="w-full max-w-md md:max-w-lg mx-auto" />
         </div>
