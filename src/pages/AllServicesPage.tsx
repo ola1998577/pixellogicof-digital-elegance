@@ -139,12 +139,10 @@ const AllServicesPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-gradient">خدماتنا</span>
+              <span className="text-gradient">{t("services.title")}</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-              نقدم حلولاً رقمية متكاملة تجمع بين التكنولوجيا المتقدمة والتصميم
-              الإبداعي
-            </p>
+ {t("services.subtitle")}            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -184,8 +182,9 @@ const AllServicesPage = () => {
                       variant="outline"
                       className="w-full mt-4 border-primary/50 hover:bg-primary/10 transition-all"
                     >
-                      اعرف المزيد
-                    </Button>
+                 {t("services.learnMore")}
+
+                  </Button>
                   </Link>
                 </CardContent>
               </Card>
